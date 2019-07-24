@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="container">
-    <h5>Dans la categorie</h5>
+    <h5>Dans la même categorie</h5>
     <div class="row justify-content-around">
     {foreach $othersProducts as $key => $product}
 
@@ -32,7 +32,7 @@
           <div class="card-body">
             <h5 class="card-title">{$product['name']}</h5>
             <p class="card-text">{$product['name']}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="produit.php?produit={$product['id']}" class="btn btn-primary">Détails du produit</a>
           </div>
         </div>
     

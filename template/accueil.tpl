@@ -2,18 +2,14 @@
 {block name=body}
     <section class="row justify-content-around">
         {foreach $Products as $categorie => $products}
-
             <div class="card mb-3" style="width: 18rem;">
               <div class="container">
-                <img class="card-img-top" src="template/img/{$products['prod1']['img']}" alt="Card image cap" style="height: 200px;">
+                <a href="categorie.php?cat={$categorie}"><img class="card-img-top" src="template/img/{$products['prod1']['img']}" alt="Card image cap" style="height: 200px;"></a>
               </div>
               <div class="card-body">
-                <h5 class="card-title">{$products['prod1']['name']}</h5>
-                <p class="card-text">{$products['prod1']['name']}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="categorie.php?cat={$categorie}" class="btn btn-outline-primary btn-block">{$categorie}</a>
               </div>
             </div>
-        
         {/foreach}
     </section>
 

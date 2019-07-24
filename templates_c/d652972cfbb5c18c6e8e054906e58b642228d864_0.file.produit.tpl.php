@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-24 09:55:11
+/* Smarty version 3.1.33-dev-5, created on 2019-07-24 14:56:24
   from 'C:\laragon\www\CCI\Boutique\template\produit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d382aff112fa1_17842864',
+  'unifunc' => 'content_5d387198e9bc28_91395396',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd652972cfbb5c18c6e8e054906e58b642228d864' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\produit.tpl',
-      1 => 1563962110,
+      1 => 1563980183,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d382aff112fa1_17842864 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d387198e9bc28_91395396 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17213421185d382aff107183_79091135', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11896559605d387198e8ed80_98667899', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_17213421185d382aff107183_79091135 extends Smarty_Internal_Block
+class Block_11896559605d387198e8ed80_98667899 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_17213421185d382aff107183_79091135',
+    0 => 'Block_11896559605d387198e8ed80_98667899',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -67,7 +67,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     </div>
   </div>
   <div class="container">
-    <h5>Dans la categorie</h5>
+    <h5>Dans la même categorie</h5>
     <div class="row justify-content-around">
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['othersProducts']->value, 'product', false, 'key');
@@ -85,7 +85,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 </h5>
             <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="produit.php?produit=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+" class="btn btn-primary">Détails du produit</a>
           </div>
         </div>
     
@@ -95,6 +96,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
   </div>
+  <div class="bottom"></div>
 <?php
 }
 }

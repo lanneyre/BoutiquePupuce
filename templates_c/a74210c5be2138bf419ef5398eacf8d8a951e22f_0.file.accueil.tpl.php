@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-24 10:33:09
+/* Smarty version 3.1.33-dev-5, created on 2019-07-24 14:56:53
   from 'C:\laragon\www\CCI\Boutique\template\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d3833e56e2b80_22945837',
+  'unifunc' => 'content_5d3871b574dd25_12412522',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a74210c5be2138bf419ef5398eacf8d8a951e22f' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\accueil.tpl',
-      1 => 1563964384,
+      1 => 1563978030,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3833e56e2b80_22945837 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3871b574dd25_12412522 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6142250875d3833e55b01b4_64401719', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5861175735d3871b573e229_95908670', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_6142250875d3833e55b01b4_64401719 extends Smarty_Internal_Block
+class Block_5861175735d3871b573e229_95908670 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_6142250875d3833e55b01b4_64401719',
+    0 => 'Block_5861175735d3871b573e229_95908670',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -47,21 +47,18 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['categorie']->value => $_smarty_tpl->tpl_vars['products']->value) {
 ?>
-
             <div class="card mb-3" style="width: 18rem;">
               <div class="container">
-                <img class="card-img-top" src="template/img/<?php echo $_smarty_tpl->tpl_vars['products']->value['prod1']['img'];?>
-" alt="Card image cap" style="height: 200px;">
+                <a href="categorie.php?cat=<?php echo $_smarty_tpl->tpl_vars['categorie']->value;?>
+"><img class="card-img-top" src="template/img/<?php echo $_smarty_tpl->tpl_vars['products']->value['prod1']['img'];?>
+" alt="Card image cap" style="height: 200px;"></a>
               </div>
               <div class="card-body">
-                <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['products']->value['prod1']['name'];?>
-</h5>
-                <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['products']->value['prod1']['name'];?>
-</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="categorie.php?cat=<?php echo $_smarty_tpl->tpl_vars['categorie']->value;?>
+" class="btn btn-outline-primary btn-block"><?php echo $_smarty_tpl->tpl_vars['categorie']->value;?>
+</a>
               </div>
             </div>
-        
         <?php
 }
 }

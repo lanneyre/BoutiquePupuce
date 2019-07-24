@@ -18,11 +18,11 @@ main {
 }
 
 #blocTopVentes{
-	padding-bottom: 120px;
+	padding-bottom: 80px;
 }
 
 footer{
-	height: 100px;
+	height: 60px;
 	background-color: black;
 	color: whitesmoke;
 	position: absolute;
@@ -30,3 +30,18 @@ footer{
 	width: 100%;
 }
 
+.table th:first-child{
+	width: 60%;
+}
+.table td:nth-child(n+2), .table th:nth-child(n+2){
+	text-align: center
+}
+
+.imgPanier{
+	width: 100%;
+	max-width: 100px;
+	min-width: 10px;
+}
+.bottom{
+	height: 60px;
+}

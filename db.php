@@ -1,9 +1,14 @@
 <?php
+$login = false;
+$tauxTva = 0.2;
 $products = array(
 		"cat1" => array(
 			"prod1" => array("id"=>1, "name"=>"truc", "img"=>"truc.gif", "prix"=>12), 
 			"prod2" => array("id"=>2, "name"=>"Machin", "img"=>"machin.jpg", "prix"=>22), 
-			"prod3"  => array("id"=>3, "name"=>"chose", "img"=>"chose.jpg", "prix"=>32)
+			"prod3"  => array("id"=>3, "name"=>"chose", "img"=>"chose.jpg", "prix"=>32),
+			"prod4" => array("id"=>13, "name"=>"Du pouvoir", "img"=>"pouvoir.gif", "prix"=>42541922), 
+			"prod5"  => array("id"=>14, "name"=>"Drole", "img"=>"boule.gif", "prix"=>707), 
+			"prod6"  => array("id"=>15, "name"=>"Courage", "img"=>"mecreant.gif", "prix"=>2)
 		), 
 		"cat2" => array(
 			"prod1" => array("id"=>4, "name"=>"bidulle", "img"=>"bidule.jpg", "prix"=>67), 
@@ -13,7 +18,7 @@ $products = array(
 		"cat3" => array(
 			"prod1" => array("id"=>7, "name"=>"Chien", "img"=>"chien.jpg", "prix"=>99999), 
 			"prod2" => array("id"=>8, "name"=>"Chat", "img"=>"chat.jpg", "prix"=>99998), 
-			"prod3"  => array("id"=>9, "name"=>"Canari", "img"=>"canari.jpg", "prix"=>9999989657885857)
+			"prod3"  => array("id"=>9, "name"=>"Canari", "img"=>"canari.jpg", "prix"=>5467528)
 		),
 		"cat4" => array(
 			"prod1" => array("id"=>10, "name"=>"Annaelle", "img"=>"annaelle.png", "prix"=>554), 

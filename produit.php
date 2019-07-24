@@ -4,8 +4,6 @@ require 'libs/Smarty.class.php';
 
 include 'db.php';
 
-$smarty = new Smarty;
-$smarty->debugging = true;
 $produit = $_GET['produit'];
 if(empty($produit)){
 	header("location: index.php");
@@ -13,6 +11,7 @@ if(empty($produit)){
 }
 $prod = null;
 $cat = null;
+$keyProd = null;
 foreach ($products as $categories => $product) {
 	# code...
 	foreach ($product as $key => $value) {
@@ -20,6 +19,7 @@ foreach ($products as $categories => $product) {
 		if ($value['id'] == $produit) {
 			# code...
 			$prod = $value;
+			$keyProd = $key;
 			$cat = $categories;
 			break(2);
 		}
@@ -29,10 +29,11 @@ if(empty($prod)){
 	header("location: index.php");
 	exit;
 }
-// var_dump($products[$cat]);
-// var_dump($prod);
+$smarty = new Smarty;
+$smarty->debugging = true;
+$smarty->assign("login", $login);
 $othersProducts = $products[$cat];
-//var_dump($othersProducts);
+unset($othersProducts[$keyProd]);
 $smarty->assign("product", $prod);
 $smarty->assign("othersProducts", $othersProducts);
 $smarty->assign("Products", $products);

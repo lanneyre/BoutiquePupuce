@@ -9,7 +9,7 @@
               <div class="card-body">
                 <h5 class="card-title">{$products['name']}</h5>
                 <p class="card-text">{$products['name']}</p>
-                <a href="produit.php?produit={$products['id']}" class="btn btn-primary">Go somewhere</a>
+                <a href="produit.php?produit={$products['id']}" class="btn btn-primary">Détails du produit</a>
               </div>
             </div>
         {/foreach}

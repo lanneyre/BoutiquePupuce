@@ -23,12 +23,20 @@
 	        <a class="nav-link" href="panier.php">Panier</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Login</a>
+	      	{if !$login}
+	      		<a class="nav-link" href="#" data-toggle="modal" data-target="#formLogin">Login</a>
+	      	{else}
+	      		<a class="nav-link" href="monCompte.php">Mon compte</a>
+	      	{/if}
 	      </li>
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
 	    </form>
 	  </div>
 	</nav>
+	{if !$login}
+		{include file="template/login.tpl"}
+	{/if}
+	
