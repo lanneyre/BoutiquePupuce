@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-24 14:44:53
+/* Smarty version 3.1.33-dev-5, created on 2019-07-25 07:19:47
   from 'C:\laragon\www\CCI\Boutique\template\panier.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d386ee5879b73_85520214',
+  'unifunc' => 'content_5d3958139e3b96_72025876',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'db38cc567335025a4b3df54384742535541eab48' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\panier.tpl',
-      1 => 1563979491,
+      1 => 1563980869,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d386ee5879b73_85520214 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3958139e3b96_72025876 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11260272915d386ee5868748_78709568', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16344944585d3958138e0d87_35786634', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_11260272915d386ee5868748_78709568 extends Smarty_Internal_Block
+class Block_16344944585d3958138e0d87_35786634 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_11260272915d386ee5868748_78709568',
+    0 => 'Block_16344944585d3958138e0d87_35786634',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -104,6 +104,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <input type="button" class="btn btn-primary" value="Payer">
     </div>
   </section>
+  
 <?php
 }
 }

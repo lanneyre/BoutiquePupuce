@@ -4,7 +4,7 @@
         {foreach $Products as $categorie => $products}
             <div class="card mb-3" style="width: 18rem;">
               <div class="container">
-                <a href="categorie.php?cat={$categorie}"><img class="card-img-top" src="template/img/{$products['prod1']['img']}" alt="Card image cap" style="height: 200px;"></a>
+                <a href="categorie.php?cat={$categorie}"><img class="card-img-top" src="template/img/{$products['prod2']['img']}" alt="Card image cap" style="height: 200px;"></a>
               </div>
               <div class="card-body">
                 <a href="categorie.php?cat={$categorie}" class="btn btn-outline-primary btn-block">{$categorie}</a>

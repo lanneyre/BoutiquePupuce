@@ -1,5 +1,11 @@
 <?php
 $login = false;
+
+$loginAutorise = [
+	["login" => "moi@moi.moi", "mdp" => "moi", "name" => "moi"],
+	["login" => "toi@toi.toi", "mdp" => "toi", "name" => "toi"],
+	["login" => "elle@elle.elle", "mdp" => "elle", "name" => "elle"]
+];
 $tauxTva = 0.2;
 $products = array(
 		"cat1" => array(

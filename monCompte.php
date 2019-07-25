@@ -1,11 +1,13 @@
 <?php
 
-require 'libs/Smarty.class.php';
+require "include/appTop.inc.php";
 
-include 'db.php';
+if (!$login) {
+	# code...
+	header("Location: index.php");
+	exit;
+}
 
-$smarty = new Smarty;
-$smarty->debugging = true;
 $smarty->assign("login", $login);
 $smarty->assign("title", "La boutique Chez Pupuce", true);
 $smarty->assign("Products", $products);

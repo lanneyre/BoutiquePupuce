@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-24 14:56:24
+/* Smarty version 3.1.33-dev-5, created on 2019-07-25 07:35:11
   from 'C:\laragon\www\CCI\Boutique\template\produit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d387198e9bc28_91395396',
+  'unifunc' => 'content_5d395bafd08de3_77159515',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd652972cfbb5c18c6e8e054906e58b642228d864' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\produit.tpl',
-      1 => 1563980183,
+      1 => 1563980879,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d387198e9bc28_91395396 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d395bafd08de3_77159515 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11896559605d387198e8ed80_98667899', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11590990525d395bafcf6c76_89509522', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_11896559605d387198e8ed80_98667899 extends Smarty_Internal_Block
+class Block_11590990525d395bafcf6c76_89509522 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_11896559605d387198e8ed80_98667899',
+    0 => 'Block_11590990525d395bafcf6c76_89509522',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -96,7 +96,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
   </div>
-  <div class="bottom"></div>
 <?php
 }
 }

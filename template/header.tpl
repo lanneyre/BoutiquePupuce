@@ -29,6 +29,11 @@
 	      		<a class="nav-link" href="monCompte.php">Mon compte</a>
 	      	{/if}
 	      </li>
+	      {if $login}
+	      <li class="nav-item">
+	      		<a class="nav-link" href="deco.php">Deco</a>
+	      </li>
+	      {/if}
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0">
 	      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche">

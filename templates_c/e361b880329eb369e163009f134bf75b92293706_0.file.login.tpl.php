@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-24 13:43:47
+/* Smarty version 3.1.33-dev-5, created on 2019-07-25 07:53:00
   from 'C:\laragon\www\CCI\Boutique\template\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d386093b14e16_46886105',
+  'unifunc' => 'content_5d395fdc222a24_17822900',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e361b880329eb369e163009f134bf75b92293706' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\login.tpl',
-      1 => 1563975824,
+      1 => 1564041110,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d386093b14e16_46886105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d395fdc222a24_17822900 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Modal -->
 <div class="modal" id="formLogin" tabindex="-1" role="dialog" aria-labelledby="LoginTitre" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -37,15 +37,15 @@ function content_5d386093b14e16_46886105 (Smarty_Internal_Template $_smarty_tpl)
             <div class="card">
               <article class="card-body">
                 <h4 class="card-title mb-4 mt-1">Se connecter</h4>
-                <form method="post" action="#">
+                <form method="post" action="traitementLogin.php">
                   <div class="form-group">
                     <label>Votre email</label>
-                    <input name="" class="form-control" placeholder="Email" type="email">
+                    <input name="email" class="form-control" placeholder="Email" type="email">
                   </div> <!-- form-group// -->
                   <div class="form-group">
                     <a class="float-right" href="#">Mot de passe oublié ?</a>
                     <label>Votre mot de passe</label>
-                    <input class="form-control" placeholder="******" type="password">
+                    <input name="pass" class="form-control" placeholder="******" type="password">
                   </div> <!-- form-group// --> 
                   <div class="form-group"> 
                     <div class="checkbox">

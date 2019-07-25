@@ -1,11 +1,5 @@
 <?php
-
-require 'libs/Smarty.class.php';
-
-include 'db.php';
-
-$smarty = new Smarty;
-$smarty->debugging = true;
+require "include/appTop.inc.php";
 
 
 $smarty->assign("login", $login);

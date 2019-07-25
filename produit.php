@@ -1,8 +1,6 @@
 <?php
 
-require 'libs/Smarty.class.php';
-
-include 'db.php';
+require "include/appTop.inc.php";
 
 $produit = $_GET['produit'];
 if(empty($produit)){
@@ -29,8 +27,7 @@ if(empty($prod)){
 	header("location: index.php");
 	exit;
 }
-$smarty = new Smarty;
-$smarty->debugging = true;
+var_dump($_SESSION);
 $smarty->assign("login", $login);
 $othersProducts = $products[$cat];
 unset($othersProducts[$keyProd]);

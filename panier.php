@@ -1,11 +1,7 @@
 <?php
 
-require 'libs/Smarty.class.php';
+require "include/appTop.inc.php";
 
-include 'db.php';
-
-$smarty = new Smarty;
-$smarty->debugging = true;
 $panier = array(
 			array($products['cat1']['prod1'], 2),
 			array($products['cat3']['prod3'], 5),

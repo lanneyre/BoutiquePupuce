@@ -1,8 +1,6 @@
 <?php
 
-require 'libs/Smarty.class.php';
-
-include 'db.php';
+require "include/appTop.inc.php";
 
 $cat = $_GET['cat'];
 if(empty($cat)){
@@ -14,8 +12,8 @@ if(empty($productsCat)){
 	header("location: index.php");
 	exit;
 }
-$smarty = new Smarty;
-$smarty->debugging = true;
+$_SESSION['categorie'] = $cat;
+var_dump($_SESSION);
 $smarty->assign("login", $login);
 $smarty->assign("Products", $products);
 $smarty->assign("ProductsCat", $productsCat);
