@@ -1,19 +1,17 @@
-<?php
-$login = false;
+<?php 
+/**
+ * 
+ */
+class manager
+{
+	static private $_categories = array(
+			array("id"=>1, "nom"=>"Cat 1","description" => "desc", "img"=>"truc.gif", "categorieParent" =>  null),
+			array("id"=>2, "nom"=>"Cat 2","description" => "desc", "img"=>"bidule.jpg", "categorieParent" =>  null),
+			array("id"=>3, "nom"=>"Cat 3","description" => "desc", "img"=>"chien.jpg", "categorieParent" =>  null),
+			array("id"=>4, "nom"=>"Cat 4","description" => "desc", "img"=>"annaelle.png", "categorieParent" =>  null),
+		);
 
-$loginAutorise = [
-	["login" => "moi@moi.moi", "mdp" => "moi", "name" => "moi"],
-	["login" => "toi@toi.toi", "mdp" => "toi", "name" => "toi"],
-	["login" => "elle@elle.elle", "mdp" => "elle", "name" => "elle"]
-];
-$tauxTva = 0.2;
-$categories = array(
-	array("id"=>1, "nom"=>"Cat 1","description" => "desc", "img"=>"truc.gif", "categorieParent" =>  null),
-	array("id"=>2, "nom"=>"Cat 2","description" => "desc", "img"=>"bidule.jpg", "categorieParent" =>  null),
-	array("id"=>3, "nom"=>"Cat 3","description" => "desc", "img"=>"chien.jpg", "categorieParent" =>  null),
-	array("id"=>4, "nom"=>"Cat 4","description" => "desc", "img"=>"annaelle.png", "categorieParent" =>  null),
-);
-$products = array(
+	static private $_products = array(
 			array("id"=>1, "nom"=>"truc", "description" => "desc","description" => "desc", "stock" => 10, "img"=>"truc.gif", "prix"=>12, "categorieId" =>  1), 
 			array("id"=>2, "nom"=>"Machin","description" => "desc", "stock" => 10, "img"=>"machin.jpg", "prix"=>22, "categorieId" => 1), 
 			array("id"=>3, "nom"=>"chose","description" => "desc", "stock" => 10, "img"=>"chose.jpg", "prix"=>32, "categorieId" => 1),
@@ -30,3 +28,39 @@ $products = array(
 			array("id"=>11, "nom"=>"Maxence","description" => "desc", "stock" => 10, "img"=>"maxence.png", "prix"=>546, "categorieId" => 4), 
 			array("id"=>12, "nom"=>"John","description" => "desc", "stock" => 10, "img"=>"john.jpg", "prix"=>5646, "categorieId" => 4)
 		);
+	static function getAllCategories()
+	{
+		# code...
+		return self::$_categories;
+	}
+	static function getAllproduits()
+	{
+		# code...
+		return self::$_products;
+	}
+	static function getProduitParCategorie($categorie_id)
+	{
+		# code...
+
+		$arrayToReturn = array();
+		foreach (self::$_products as $product) {
+			# code...
+			if($product['categorieId'] == $categorie_id){
+				$arrayToReturn[] = $product;
+			}
+		}
+		return $arrayToReturn;
+	}
+	static function getTopVentes(){
+		$arrayToReturn = array();
+
+		foreach (self::$_categories as $categorie) {
+			# code...
+			$list = self::getProduitParCategorie($categorie['id']);
+
+			$arrayToReturn[$categorie['id']] = $list[array_rand($list)];
+		}
+
+		return $arrayToReturn;
+	}
+}

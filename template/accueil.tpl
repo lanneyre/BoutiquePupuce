@@ -1,13 +1,13 @@
 {extends file="template/layout.tpl"}
 {block name=body}
     <section class="row justify-content-around">
-        {foreach $Products as $categorie => $products}
-            <div class="card mb-3" style="width: 18rem;">
+        {foreach $categories as $categorie}
+          <div class="card mb-3" style="width: 18rem;">
               <div class="container">
-                <a href="categorie.php?cat={$categorie}"><img class="card-img-top" src="template/img/{$products['prod2']['img']}" alt="Card image cap" style="height: 200px;"></a>
+                <a href="categorie.php?cat={$categorie['id']}"><img class="card-img-top" src="template/img/categories/{$categorie['img']}" alt="Card image cap" style="height: 200px;"></a>
               </div>
               <div class="card-body">
-                <a href="categorie.php?cat={$categorie}" class="btn btn-outline-primary btn-block">{$categorie}</a>
+                <a href="categorie.php?cat={$categorie['id']}" class="btn btn-outline-primary btn-block">{$categorie['nom']}</a>
               </div>
             </div>
         {/foreach}
@@ -23,8 +23,8 @@
           </ol>
           <div class="carousel-inner">
             {foreach $topVentes as $key => $value}
-            <div class="carousel-item {if $value['active']}active{/if}">
-              <img class="d-block w-100" src="template/img/{$value['img']}" alt="{$value['name']}">
+            <div class="carousel-item {if $key == $topVentesActive}active{/if}">
+              <img class="d-block w-100" src="template/img/produits/{$value['img']}" alt="{$value['nom']}">
             </div>
             {/foreach}
           </div>

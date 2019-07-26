@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-25 08:44:30
+/* Smarty version 3.1.33-dev-5, created on 2019-07-26 10:24:52
   from 'C:\laragon\www\CCI\Boutique\template\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d396beee2c059_49389782',
+  'unifunc' => 'content_5d3ad4f4cc0173_48538701',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a74210c5be2138bf419ef5398eacf8d8a951e22f' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\accueil.tpl',
-      1 => 1564044270,
+      1 => 1564136619,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d396beee2c059_49389782 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3ad4f4cc0173_48538701 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14973194815d396beed7ff02_04474660', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12574936355d3ad4f4ca06a0_77602138', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_14973194815d396beed7ff02_04474660 extends Smarty_Internal_Block
+class Block_12574936355d3ad4f4ca06a0_77602138 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_14973194815d396beed7ff02_04474660',
+    0 => 'Block_12574936355d3ad4f4ca06a0_77602138',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -43,19 +43,19 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
     <section class="row justify-content-around">
         <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Products']->value, 'products', false, 'categorie');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'categorie');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['categorie']->value => $_smarty_tpl->tpl_vars['products']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['categorie']->value) {
 ?>
-            <div class="card mb-3" style="width: 18rem;">
+          <div class="card mb-3" style="width: 18rem;">
               <div class="container">
-                <a href="categorie.php?cat=<?php echo $_smarty_tpl->tpl_vars['categorie']->value;?>
-"><img class="card-img-top" src="template/img/<?php echo $_smarty_tpl->tpl_vars['products']->value['prod2']['img'];?>
+                <a href="categorie.php?cat=<?php echo $_smarty_tpl->tpl_vars['categorie']->value['id'];?>
+"><img class="card-img-top" src="template/img/categories/<?php echo $_smarty_tpl->tpl_vars['categorie']->value['img'];?>
 " alt="Card image cap" style="height: 200px;"></a>
               </div>
               <div class="card-body">
-                <a href="categorie.php?cat=<?php echo $_smarty_tpl->tpl_vars['categorie']->value;?>
-" class="btn btn-outline-primary btn-block"><?php echo $_smarty_tpl->tpl_vars['categorie']->value;?>
+                <a href="categorie.php?cat=<?php echo $_smarty_tpl->tpl_vars['categorie']->value['id'];?>
+" class="btn btn-outline-primary btn-block"><?php echo $_smarty_tpl->tpl_vars['categorie']->value['nom'];?>
 </a>
               </div>
             </div>
@@ -79,9 +79,9 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
 ?>
-            <div class="carousel-item <?php if ($_smarty_tpl->tpl_vars['value']->value['active']) {?>active<?php }?>">
-              <img class="d-block w-100" src="template/img/<?php echo $_smarty_tpl->tpl_vars['value']->value['img'];?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['value']->value['name'];?>
+            <div class="carousel-item <?php if ($_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['topVentesActive']->value) {?>active<?php }?>">
+              <img class="d-block w-100" src="template/img/produits/<?php echo $_smarty_tpl->tpl_vars['value']->value['img'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['value']->value['nom'];?>
 ">
             </div>
             <?php
