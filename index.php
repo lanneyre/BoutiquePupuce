@@ -4,7 +4,7 @@ require "include/appTop.inc.php";
 
 $smarty->assign("login", $login);
 $smarty->assign("title", "La boutique Chez Pupuce", true);
-$smarty->assign("categories", manager::getAllCategories());
+
 $smarty->assign("products", manager::getAllproduits());
 $topVentes = manager::getTopVentes();
 $smarty->assign("topVentes", $topVentes);

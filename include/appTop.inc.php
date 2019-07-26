@@ -19,3 +19,4 @@ if(!empty($_SESSION["login"]) && !empty($_SESSION["mdp"]) && !empty($_SESSION["n
 } 
 
 $smarty->assign("userLogin", $userLogin);
+$smarty->assign("categories", manager::getAllCategories());

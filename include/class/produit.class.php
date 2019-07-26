@@ -18,7 +18,21 @@ class produit extends elements
 		$this->_categorieId = $categorieId;
 	}
 
-	function getById($id){
-		
+	function __get($name){
+		return $this->$name;
+	}
+	function __set($name, $value){
+		$this->$name = $value;
+	}
+
+	static function getById($id){
+		foreach ($GLOBALS['products'] as $product) {
+			# code...
+			if($product['id'] == $id){
+				return new produit($product['id'], $product['nom'],$product['description'], $product['img'],$product['prix'],$product['stock'],$product['categorieId']);
+				break;
+			}
+		}
+		return null;
 	}
 }

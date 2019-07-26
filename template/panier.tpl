@@ -17,13 +17,13 @@
           <tr>
             <td>
               <div class="row">
-                <div class="col-3"><img src="template/img/{$produits[0]['img']}" alt="{$produits[0]['name']}" class="imgPanier"></div>
-                <div class="col-9">{$produits[0]['name']}</div> 
+                <div class="col-3"><img src="template/img/produits/{$produits[0]->_img}" alt="{$produits[0]->_nom}" class="imgPanier"></div>
+                <div class="col-9">{$produits[0]->_nom}</div> 
               </div>
             </td>
-            <td>{number_format($produits[0]['prix'], 2, ',', ' ')} €</td>
+            <td>{number_format($produits[0]->_prix, 2, ',', ' ')} €</td>
             <td>{$produits[1]}</td>
-            <td>{number_format($produits[1]*$produits[0]['prix'], 2, ',', ' ')} €</td>
+            <td>{number_format($produits[1]*$produits[0]->_prix, 2, ',', ' ')} €</td>
             <td><button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
           </tr>
           {/foreach}

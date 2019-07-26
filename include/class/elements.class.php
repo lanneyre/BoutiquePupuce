@@ -4,10 +4,10 @@
  */
 class elements
 {
-	private $_id;
-	private $_nom;
-	private $_description;
-	private $_img;
+	protected $_id;
+	protected $_nom;
+	protected $_description;
+	protected $_img;
 
 	function __construct($id, $nom, $description, $img)
 	{
@@ -16,12 +16,5 @@ class elements
 		$this->_nom = $nom;
 		$this->_description = $description;
 		$this->_img = $img;
-	}
-
-	function __get($name){
-		return $this->$name;
-	}
-	function __set($name, $value){
-		$this->$name = $value;
 	}
 }

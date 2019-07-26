@@ -38,7 +38,7 @@ class manager
 		# code...
 		return self::$_products;
 	}
-	static function getProduitParCategorie($categorie_id)
+	static function getProduitParCategorie($categorie_id, $idToIgnore = 0)
 	{
 		# code...
 
@@ -46,7 +46,8 @@ class manager
 		foreach (self::$_products as $product) {
 			# code...
 			if($product['categorieId'] == $categorie_id){
-				$arrayToReturn[] = $product;
+				if($product['id'] != $idToIgnore)
+					$arrayToReturn[] = $product;
 			}
 		}
 		return $arrayToReturn;

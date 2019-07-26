@@ -7,13 +7,13 @@ $loginAutorise = [
 	["login" => "elle@elle.elle", "mdp" => "elle", "name" => "elle"]
 ];
 $tauxTva = 0.2;
-$categories = array(
+$GLOBALS['categories'] = array(
 	array("id"=>1, "nom"=>"Cat 1","description" => "desc", "img"=>"truc.gif", "categorieParent" =>  null),
 	array("id"=>2, "nom"=>"Cat 2","description" => "desc", "img"=>"bidule.jpg", "categorieParent" =>  null),
 	array("id"=>3, "nom"=>"Cat 3","description" => "desc", "img"=>"chien.jpg", "categorieParent" =>  null),
 	array("id"=>4, "nom"=>"Cat 4","description" => "desc", "img"=>"annaelle.png", "categorieParent" =>  null),
 );
-$products = array(
+$GLOBALS['products'] = array(
 			array("id"=>1, "nom"=>"truc", "description" => "desc","description" => "desc", "stock" => 10, "img"=>"truc.gif", "prix"=>12, "categorieId" =>  1), 
 			array("id"=>2, "nom"=>"Machin","description" => "desc", "stock" => 10, "img"=>"machin.jpg", "prix"=>22, "categorieId" => 1), 
 			array("id"=>3, "nom"=>"chose","description" => "desc", "stock" => 10, "img"=>"chose.jpg", "prix"=>32, "categorieId" => 1),

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-25 07:35:11
+/* Smarty version 3.1.33-dev-5, created on 2019-07-26 12:59:34
   from 'C:\laragon\www\CCI\Boutique\template\produit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d395bafd08de3_77159515',
+  'unifunc' => 'content_5d3af93667b799_56197455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd652972cfbb5c18c6e8e054906e58b642228d864' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\produit.tpl',
-      1 => 1563980879,
+      1 => 1564145973,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d395bafd08de3_77159515 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3af93667b799_56197455 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11590990525d395bafcf6c76_89509522', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15017788525d3af9366494c8_55594111', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_11590990525d395bafcf6c76_89509522 extends Smarty_Internal_Block
+class Block_15017788525d3af9366494c8_55594111 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_11590990525d395bafcf6c76_89509522',
+    0 => 'Block_15017788525d3af9366494c8_55594111',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -45,17 +45,17 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="template/img/<?php echo $_smarty_tpl->tpl_vars['product']->value['img'];?>
-" class="card-img" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+          <img src="template/img/produits/<?php echo $_smarty_tpl->tpl_vars['product']->value->_img;?>
+" class="card-img" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->_nom;?>
 ">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->_nom;?>
 </h5>
-            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->_description;?>
 </p>
-            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value['prix'];?>
+            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->_prix;?>
  €</p>
             <form action="#" method="post">
               <input type="number" class="form-control" min="0" max="42">
@@ -70,20 +70,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <h5>Dans la même categorie</h5>
     <div class="row justify-content-around">
     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['othersProducts']->value, 'product', false, 'key');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['othersProducts']->value, 'product');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['product']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?>
 
         <div class="card mb-3" style="width: 18rem;">
           <div class="container">
-            <img class="card-img-top" src="template/img/<?php echo $_smarty_tpl->tpl_vars['product']->value['img'];?>
+            <img class="card-img-top" src="template/img/produits/<?php echo $_smarty_tpl->tpl_vars['product']->value['img'];?>
 " alt="Card image cap" style="height: 200px;">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value['nom'];?>
 </h5>
-            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value['description'];?>
 </p>
             <a href="produit.php?produit=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
 " class="btn btn-primary">Détails du produit</a>

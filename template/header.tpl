@@ -14,8 +14,8 @@
 	          Catégories
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	        	{foreach $Products as $categorie => $products}
-	          <a class="dropdown-item" href="categorie.php?cat={$categorie}">{$categorie}</a>
+	        	{foreach $categories as $categorie}
+	          <a class="dropdown-item" href="categorie.php?cat={$categorie['id']}">{$categorie['nom']}</a>
 	          {/foreach}
 	        </div>
 	      </li>

@@ -12,7 +12,11 @@ class categorie extends elements
 		parent::__construct($id, $nom, $description, $img);
 		$this->_parentId = $parentId;
 	}
-	function getById($id){
-		
+
+	function __get($name){
+		return $this->$name;
+	}
+	function __set($name, $value){
+		$this->$name = $value;
 	}
 }
