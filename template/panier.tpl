@@ -22,9 +22,15 @@
               </div>
             </td>
             <td>{number_format($produits[0]->_prix, 2, ',', ' ')} €</td>
-            <td>{$produits[1]}</td>
+            <td>
+              <form action="updateQte.php" method="POST">
+                <input type="hidden" name="idProduit" value="{$produits[0]->_id}">
+                <input type="number" name="qteProduit" value="{$produits[1]}" min="0" max="42" class="updateQte">
+              </form>
+              
+            </td>
             <td>{number_format($produits[1]*$produits[0]->_prix, 2, ',', ' ')} €</td>
-            <td><button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+            <td><a href="delProduit.php?id={$produits[0]->_id}"><button type="button" class="btn btn-outline-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
           </tr>
           {/foreach}
         </tbody>

@@ -8,19 +8,18 @@ $panier = array(
 			array(produit::getById(9), 1)
 		);
 
-$pu = 0;
-$tva = 0;
-$ttc = 0;
-foreach ($panier as $product) {
-	# code...
-	$pu += $product[1] * $product[0]->_prix;
-}
-$tva = $pu * $tauxTva;
-$ttc = $pu + $tva;
+// panier::addProduit(produit::getById(1), 2);
+// panier::addProduit(produit::getById(14), 5);
+// panier::addProduit(produit::getById(8), 20);
+
+$panier = panier::getProduits();
+$pu = panier::prixTotal();
+$tva = panier::getTVA();
+$ttc = panier::prixTotalTTC();
 
 $smarty->assign("pu", $pu);
 $smarty->assign("tva", $tva);
-$smarty->assign("tauxTva", $tauxTva*100);
+$smarty->assign("tauxTva", panier::$_TxTva*100);
 $smarty->assign("ttc", $ttc);
 
 $smarty->assign("login", $login);

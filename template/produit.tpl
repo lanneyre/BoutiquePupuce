@@ -11,9 +11,10 @@
             <h5 class="card-title">{$product->_nom}</h5>
             <p class="card-text">{$product->_description}</p>
             <p class="card-text">{$product->_prix} €</p>
-            <form action="#" method="post">
-              <input type="number" class="form-control" min="0" max="42">
-              <input type="button" class="btn btn-outline-primary" value="Ajouter au panier">
+            <form action="addProduits.php" method="post">
+              <input type="hidden" name="idProduit" value="{$product->_id}">
+              <input type="number" name="qteProduit" class="form-control" min="1" max="42" value="1">
+              <input type="submit" class="btn btn-outline-primary" value="Ajouter au panier">
             </form>
           </div>
         </div>

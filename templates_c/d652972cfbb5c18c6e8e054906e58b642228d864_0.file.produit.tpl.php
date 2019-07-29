@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-26 12:59:34
+/* Smarty version 3.1.33-dev-5, created on 2019-07-29 09:34:37
   from 'C:\laragon\www\CCI\Boutique\template\produit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d3af93667b799_56197455',
+  'unifunc' => 'content_5d3ebdad9d6b08_16257191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd652972cfbb5c18c6e8e054906e58b642228d864' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\produit.tpl',
-      1 => 1564145973,
+      1 => 1564392632,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3af93667b799_56197455 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3ebdad9d6b08_16257191 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15017788525d3af9366494c8_55594111', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1017588475d3ebdad9caa21_38509868', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_15017788525d3af9366494c8_55594111 extends Smarty_Internal_Block
+class Block_1017588475d3ebdad9caa21_38509868 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_15017788525d3af9366494c8_55594111',
+    0 => 'Block_1017588475d3ebdad9caa21_38509868',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -57,9 +57,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 </p>
             <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->_prix;?>
  €</p>
-            <form action="#" method="post">
-              <input type="number" class="form-control" min="0" max="42">
-              <input type="button" class="btn btn-outline-primary" value="Ajouter au panier">
+            <form action="addProduits.php" method="post">
+              <input type="hidden" name="idProduit" value="<?php echo $_smarty_tpl->tpl_vars['product']->value->_id;?>
+">
+              <input type="number" name="qteProduit" class="form-control" min="1" max="42" value="1">
+              <input type="submit" class="btn btn-outline-primary" value="Ajouter au panier">
             </form>
           </div>
         </div>

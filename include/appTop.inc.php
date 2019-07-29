@@ -1,12 +1,18 @@
 <?php 
 
-session_start();
+
 
 require_once 'libs/Autoloader.php';
 Smarty_Autoloader::register();
 
 require_once 'include/Autoloader.php';
 Autoloader::register();
+
+session_start();
+
+if(!isset($_SESSION['panier'])){
+	$_SESSION['panier'] = array();
+}
 
 include 'db.php';
 
