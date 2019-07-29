@@ -7,5 +7,5 @@ $qte = $_POST['qteProduit'];
 
 panier::setQte($id, $qte);
 
-header("Location: panier.php?traitement=ok");
+header("Location: panier.php?panier=updateOk");
 exit;

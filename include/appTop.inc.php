@@ -26,3 +26,28 @@ if(!empty($_SESSION["login"]) && !empty($_SESSION["mdp"]) && !empty($_SESSION["n
 
 $smarty->assign("userLogin", $userLogin);
 $smarty->assign("categories", manager::getAllCategories());
+
+$msg = "";
+if(!empty($_GET['panier'])){
+	switch ($_GET['panier']) {
+		case 'addOk':
+			# code...
+			$msg = "Le produit a bien été ajouté";
+			break;
+		case 'delOk':
+			# code...
+			$msg = "Le produit a bien été supprimé";
+			break;
+		case 'updateOk':
+			# code...
+			$msg = "Le produit a bien été mis à jour";
+			break;
+		default:
+			# code...
+			$msg = "Une erreur est intervenue";
+			break;
+	}
+	$smarty->assign("msgtype", $_GET['panier']);
+}	
+
+$smarty->assign("msgPanier", $msg);

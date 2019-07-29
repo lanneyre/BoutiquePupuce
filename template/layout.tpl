@@ -17,6 +17,21 @@
       <section class="container-fluid" id="content">
         {block name=body}{/block}
       </section>
+      {if !empty($msgPanier) && isset($msgtype) && $msgtype == "addOk"}
+          <div class="modal" tabindex="-1" role="dialog" id="msgPanier">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <p class="alert alert-success">{$msgPanier}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Continuer mes achats</button>
+                  <a href="panier.php"><button type="button" class="btn btn-secondary">Aller vers mon panier</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+      {/if }
       {include file="template/footer.tpl"}
     </main>
     <!-- Optional JavaScript -->
@@ -29,5 +44,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
     <script src="template/js/script.js"></script>
+    {if !empty($msgPanier)}
+    <script>
+      $('#msgPanier').modal('show');
+    </script>
+    {/if}
   </body>
 </html>

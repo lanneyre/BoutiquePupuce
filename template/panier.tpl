@@ -17,15 +17,15 @@
           <tr>
             <td>
               <div class="row">
-                <div class="col-3"><img src="template/img/produits/{$produits[0]->_img}" alt="{$produits[0]->_nom}" class="imgPanier"></div>
-                <div class="col-9">{$produits[0]->_nom}</div> 
+                <div class="col-3"><a href="produit.php?produit={$produits[0]->_id}"><img src="template/img/produits/{$produits[0]->_img}" alt="{$produits[0]->_nom}" class="imgPanier"></a></div>
+                <div class="col-9"><a href="produit.php?produit={$produits[0]->_id}">{$produits[0]->_nom}</a></div> 
               </div>
             </td>
             <td>{number_format($produits[0]->_prix, 2, ',', ' ')} €</td>
             <td>
               <form action="updateQte.php" method="POST">
                 <input type="hidden" name="idProduit" value="{$produits[0]->_id}">
-                <input type="number" name="qteProduit" value="{$produits[1]}" min="0" max="42" class="updateQte">
+                <input type="number" name="qteProduit" value="{$produits[1]}" min="0" max="42" class="form-control updateQte">
               </form>
               
             </td>
