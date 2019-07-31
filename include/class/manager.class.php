@@ -64,4 +64,25 @@ class manager
 
 		return $arrayToReturn;
 	}
+
+	static function recherche($search){
+		$arrayToReturn = array();
+		foreach (self::getAllproduits() as $produit) {
+			if(stripos($produit['nom'], $search) !== false || stripos($produit['description'], $search) !== false){
+				$arrayToReturn[] = $produit;
+			}		
+		}	
+		return $arrayToReturn;
+	}
+
+	static function createCommande($panier, $user){
+		$toutSePasseBien = true;
+		foreach ($panier as $produit) {
+			# code...
+			echo "j'insère dans la bdd ".$produit[1]." ".$produit[0]->_nom."<br>";
+		}
+		echo "pour le compte de ".$user->_name."<br>";
+
+		return $toutSePasseBien;
+	}
 }

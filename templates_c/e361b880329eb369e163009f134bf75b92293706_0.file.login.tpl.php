@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-25 07:53:00
+/* Smarty version 3.1.33-dev-5, created on 2019-07-30 09:41:57
   from 'C:\laragon\www\CCI\Boutique\template\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d395fdc222a24_17822900',
+  'unifunc' => 'content_5d4010e503a844_43562293',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e361b880329eb369e163009f134bf75b92293706' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\login.tpl',
-      1 => 1564041110,
+      1 => 1564479594,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d395fdc222a24_17822900 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4010e503a844_43562293 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Modal -->
 <div class="modal" id="formLogin" tabindex="-1" role="dialog" aria-labelledby="LoginTitre" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -38,6 +38,7 @@ function content_5d395fdc222a24_17822900 (Smarty_Internal_Template $_smarty_tpl)
               <article class="card-body">
                 <h4 class="card-title mb-4 mt-1">Se connecter</h4>
                 <form method="post" action="traitementLogin.php">
+                  <input type="hidden" name="actionLogin" id="actionLogin" value="">
                   <div class="form-group">
                     <label>Votre email</label>
                     <input name="email" class="form-control" placeholder="Email" type="email">

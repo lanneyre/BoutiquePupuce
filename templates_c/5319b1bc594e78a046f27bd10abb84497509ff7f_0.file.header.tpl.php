@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-26 13:03:43
+/* Smarty version 3.1.33-dev-5, created on 2019-07-30 09:01:15
   from 'C:\laragon\www\CCI\Boutique\template\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d3afa2f8066d8_17515849',
+  'unifunc' => 'content_5d40075b940661_50706389',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5319b1bc594e78a046f27bd10abb84497509ff7f' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\header.tpl',
-      1 => 1564146221,
+      1 => 1564477272,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:template/login.tpl' => 1,
   ),
 ),false)) {
-function content_5d3afa2f8066d8_17515849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d40075b940661_50706389 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 	  <a class="navbar-brand" href="#"><img src="template/img/Logo.png" alt="Chez Pupuce" id="logo"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,8 +68,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	      </li>
 	      <?php }?>
 	    </ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche">
+	    <form class="form-inline my-2 my-lg-0" method="POST" action="recherche.php">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche" value="<?php if (!empty($_smarty_tpl->tpl_vars['search']->value)) {
+echo $_smarty_tpl->tpl_vars['search']->value;
+}?>" name="recherche">
 	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
 	    </form>
 	  </div>

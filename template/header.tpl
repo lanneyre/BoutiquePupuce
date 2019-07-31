@@ -35,8 +35,8 @@
 	      </li>
 	      {/if}
 	    </ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche">
+	    <form class="form-inline my-2 my-lg-0" method="POST" action="recherche.php">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche" value="{if !empty($search)}{$search}{/if}" name="recherche">
 	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
 	    </form>
 	  </div>

@@ -15,6 +15,7 @@
               <article class="card-body">
                 <h4 class="card-title mb-4 mt-1">Se connecter</h4>
                 <form method="post" action="traitementLogin.php">
+                  <input type="hidden" name="actionLogin" id="actionLogin" value="">
                   <div class="form-group">
                     <label>Votre email</label>
                     <input name="email" class="form-control" placeholder="Email" type="email">

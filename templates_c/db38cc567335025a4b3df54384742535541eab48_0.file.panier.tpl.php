@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-29 15:04:25
+/* Smarty version 3.1.33-dev-5, created on 2019-07-30 10:16:12
   from 'C:\laragon\www\CCI\Boutique\template\panier.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d3f0af93c9c83_14454611',
+  'unifunc' => 'content_5d4018ec45d644_13378657',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'db38cc567335025a4b3df54384742535541eab48' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\panier.tpl',
-      1 => 1564412661,
+      1 => 1564481770,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3f0af93c9c83_14454611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4018ec45d644_13378657 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3822341845d3f0af93b7c18_33663864', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1724186915d4018ec42faa4_51398848', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_3822341845d3f0af93b7c18_33663864 extends Smarty_Internal_Block
+class Block_1724186915d4018ec42faa4_51398848 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_3822341845d3f0af93b7c18_33663864',
+    0 => 'Block_1724186915d4018ec42faa4_51398848',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,7 +93,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['produits']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </tbody>
       </table>
-      <input type="button" class="btn btn-primary" value="Continuer mes achats">
+      <a href="index.php" class="btn btn-primary">Continuer mes achats</a>
     </div>
     <div class="col-4">
       <div class="card">
@@ -110,8 +110,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
  €</div>
         </div>
       </div>
-       
-      <input type="button" class="btn btn-primary" value="Payer">
+      <?php if (count($_smarty_tpl->tpl_vars['panier']->value) > 0) {?>
+        <?php if (!$_smarty_tpl->tpl_vars['login']->value) {?>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#formLogin" id="boutonPayer"><input type="button" class="btn btn-primary" value="Payer"></a>
+        <?php } else { ?>
+          <a class="nav-link" href="validePanier.php"><input type="button" class="btn btn-primary" value="Payer"></a>
+        <?php }?>
+      
+      <?php }?>
     </div>
   </section>
   

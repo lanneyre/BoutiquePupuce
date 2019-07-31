@@ -26,7 +26,7 @@ if(!empty($_SESSION["login"]) && !empty($_SESSION["mdp"]) && !empty($_SESSION["n
 
 $smarty->assign("userLogin", $userLogin);
 $smarty->assign("categories", manager::getAllCategories());
-
+$smarty->assign("login", $login);
 $msg = "";
 if(!empty($_GET['panier'])){
 	switch ($_GET['panier']) {

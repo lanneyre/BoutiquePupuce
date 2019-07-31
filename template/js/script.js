@@ -3,3 +3,12 @@ $( ".updateQte" ).each(function( index ) {
 		$(this).parent().submit();
 	});
 });
+
+$('#boutonPayer').on('click', function () {
+  $("#actionLogin").val("payer");
+});
+
+$('#formLogin').on('hidden.bs.modal', function () {
+  $("#actionLogin").val("");
+});
+

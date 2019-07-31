@@ -35,7 +35,7 @@
           {/foreach}
         </tbody>
       </table>
-      <input type="button" class="btn btn-primary" value="Continuer mes achats">
+      <a href="index.php" class="btn btn-primary">Continuer mes achats</a>
     </div>
     <div class="col-4">
       <div class="card">
@@ -48,8 +48,14 @@
           <div class="alert alert-danger font-weight-bold">Total TTC : {number_format($ttc, 2, ',', ' ')} €</div>
         </div>
       </div>
-       
-      <input type="button" class="btn btn-primary" value="Payer">
+      {if count($panier)>0}
+        {if !$login}
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#formLogin" id="boutonPayer"><input type="button" class="btn btn-primary" value="Payer"></a>
+        {else}
+          <a class="nav-link" href="validePanier.php"><input type="button" class="btn btn-primary" value="Payer"></a>
+        {/if}
+      
+      {/if}
     </div>
   </section>
   

@@ -28,7 +28,7 @@
 
         <div class="card mb-3" style="width: 18rem;">
           <div class="container">
-            <img class="card-img-top" src="template/img/produits/{$product['img']}" alt="Card image cap" style="height: 200px;">
+            <a href="produit.php?produit={$product['id']}"><img class="card-img-top" src="template/img/produits/{$product['img']}" alt="Card image cap" style="height: 200px;"></a>
           </div>
           <div class="card-body">
             <h5 class="card-title">{$product['nom']}</h5>

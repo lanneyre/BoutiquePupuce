@@ -9,16 +9,16 @@ class user
 	private $_name;
 	private $_mdp;
 
-	private $_loginAutorise = [
-		["login" => "moi@moi.moi", "mdp" => "moi", "name" => "moi"],
-		["login" => "toi@toi.toi", "mdp" => "toi", "name" => "toi"],
-		["login" => "elle@elle.elle", "mdp" => "elle", "name" => "elle"]
+	static private $_loginAutorise = [
+		["id" => 1, "login" => "moi@moi.moi", "mdp" => "moi", "name" => "moi"],
+		["id" => 2, "login" => "toi@toi.toi", "mdp" => "toi", "name" => "toi"],
+		["id" => 3, "login" => "elle@elle.elle", "mdp" => "elle", "name" => "elle"]
 	];
 
-	function __construct($login, $mdp, $name = "")
+	function __construct($login, $mdp, $name = "", $id = null)
 	{
 		# code...
-		$this->_id = null;
+		$this->_id = $id;
 		$this->_name = $name;
 		$this->_login = $login;
 		$this->_mdp = $mdp;
@@ -33,14 +33,25 @@ class user
 	}
 
 	function verifAutorisation(){
-		foreach ($this->_loginAutorise as $user) {
+		foreach (self::$_loginAutorise as $user) {
 			# code...
 			if($user['login'] == $this->_login && $user['mdp'] == $this->_mdp){
 				$this->_name = $user['name'];
+				$this->_id = $user['id'];
 				return true;
 			}
 		}
 		return false;
 	}
 
+	static function getById($id){
+		foreach (self::$_loginAutorise as $user) {
+			# code...
+			if($user['id'] == $id){
+				return new user($user['login'], $user['mdp'],$user['name'], $user['id']);
+				break;
+			}
+		}
+		return null;
+	}
 }
