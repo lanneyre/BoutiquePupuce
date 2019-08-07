@@ -4,17 +4,17 @@
  */
 class elements
 {
-	protected $_id;
-	protected $_nom;
-	protected $_description;
-	protected $_img;
+	protected $id;
+	protected $nom;
+	protected $description;
+	protected $img;
 
 	function __construct($id, $nom, $description, $img)
 	{
 		# code...
-		$this->_id = $id;
-		$this->_nom = $nom;
-		$this->_description = $description;
-		$this->_img = $img;
+		$this->id = $id;
+		$this->nom = $nom;
+		$this->description = $description;
+		$this->img = $img;
 	}
 }

@@ -17,20 +17,20 @@
           <tr>
             <td>
               <div class="row">
-                <div class="col-3"><a href="produit.php?produit={$produits[0]->_id}"><img src="template/img/produits/{$produits[0]->_img}" alt="{$produits[0]->_nom}" class="imgPanier"></a></div>
-                <div class="col-9"><a href="produit.php?produit={$produits[0]->_id}">{$produits[0]->_nom}</a></div> 
+                <div class="col-3"><a href="produit.php?produit={$produits[0]->id}"><img src="template/img/produits/{$produits[0]->img}" alt="{$produits[0]->nom}" class="imgPanier"></a></div>
+                <div class="col-9"><a href="produit.php?produit={$produits[0]->id}">{$produits[0]->nom}</a></div> 
               </div>
             </td>
-            <td>{number_format($produits[0]->_prix, 2, ',', ' ')} €</td>
+            <td>{number_format($produits[0]->prix, 2, ',', ' ')} €</td>
             <td>
               <form action="updateQte.php" method="POST">
-                <input type="hidden" name="idProduit" value="{$produits[0]->_id}">
+                <input type="hidden" name="idProduit" value="{$produits[0]->id}">
                 <input type="number" name="qteProduit" value="{$produits[1]}" min="0" max="42" class="form-control updateQte">
               </form>
               
             </td>
-            <td>{number_format($produits[1]*$produits[0]->_prix, 2, ',', ' ')} €</td>
-            <td><a href="delProduit.php?id={$produits[0]->_id}"><button type="button" class="btn btn-outline-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
+            <td>{number_format($produits[1]*$produits[0]->prix, 2, ',', ' ')} €</td>
+            <td><a href="delProduit.php?id={$produits[0]->id}"><button type="button" class="btn btn-outline-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
           </tr>
           {/foreach}
         </tbody>

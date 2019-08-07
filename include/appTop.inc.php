@@ -15,6 +15,7 @@ if(!isset($_SESSION['panier'])){
 }
 
 include 'db.php';
+database::createConnexion();
 
 $smarty = new Smarty;
 $smarty->debugging = true;

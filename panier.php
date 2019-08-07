@@ -3,9 +3,9 @@
 require "include/appTop.inc.php";
 
 $panier = array(
-			array(produit::getById(1), 2),
-			array(produit::getById(14), 5),
-			array(produit::getById(9), 1)
+			array(manager::getById(1), 2),
+			array(manager::getById(14), 5),
+			array(manager::getById(9), 1)
 		);
 
 // panier::addProduit(produit::getById(1), 2);

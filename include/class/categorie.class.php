@@ -4,13 +4,13 @@
  */
 class categorie extends elements
 {
-	private $_parentId;
+	private $parentId;
 
-	function __construct($id, $nom, $description, $img, $parentId)
+	function __construct($id = null, $nom = "", $description = "", $img = "", $parentId = "")
 	{
 		# code...
 		parent::__construct($id, $nom, $description, $img);
-		$this->_parentId = $parentId;
+		$this->parentId = $parentId;
 	}
 
 	function __get($name){

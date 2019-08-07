@@ -33,7 +33,7 @@ class panier
 			// $product[0] = produits
 			// $product[1] = qté
 			// Je rajoute le prix du produit multiplié par la quantité
-			$prixTotal += $product[0]->_prix * $product[1];
+			$prixTotal += $product[0]->prix * $product[1];
 		}
 		//je renvoi le prix calculé 
 		return $prixTotal;
@@ -55,7 +55,7 @@ class panier
 	// Cette fonction ajoute un tableau avec 2 cases la première contient un objet de type produit et la seconde la quantité
 	static function addProduit($produit, $qte){
 		// je cherche le panier contient déjà le produit
-		$key = self::rechercheProduit($produit->_id);
+		$key = self::rechercheProduit($produit->id);
 		// Si c'est le cas je met à jour la quantité
 		if($key !== false){
 			$_SESSION['panier'][$key][1] += $qte;
@@ -92,7 +92,7 @@ class panier
 		foreach (self::getProduits() as $key => $value) {
 			# code...
 			// Je regarde si l'id que je cherche correpsond à l'id du produit
-			if($value[0]->_id == $idProduit){
+			if($value[0]->id == $idProduit){
 				$keyToReturn = $key;
 				// Si je trouve j'arrete la boucle
 				break;

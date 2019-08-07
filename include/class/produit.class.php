@@ -4,18 +4,18 @@
  */
 class produit extends elements
 {
-	private $_prix;
-	private $_stock;
-	private $_categorieId;
+	private $prix;
+	private $stock;
+	private $categorieId;
 
-	function __construct($id, $nom, $description, $img, $prix, $stock, $categorieId)
+	function __construct($id = null, $nom = "", $description = "", $img = "", $prix = 0, $stock = 0, $categorieId = null)
 	{
 		# code...
 
 		parent::__construct($id, $nom, $description, $img);
-		$this->_prix = $prix;
-		$this->_stock = $stock;
-		$this->_categorieId = $categorieId;
+		$this->prix = $prix;
+		$this->stock = $stock;
+		$this->categorieId = $categorieId;
 	}
 
 	function __get($name){
@@ -25,14 +25,5 @@ class produit extends elements
 		$this->$name = $value;
 	}
 
-	static function getById($id){
-		foreach ($GLOBALS['products'] as $product) {
-			# code...
-			if($product['id'] == $id){
-				return new produit($product['id'], $product['nom'],$product['description'], $product['img'],$product['prix'],$product['stock'],$product['categorieId']);
-				break;
-			}
-		}
-		return null;
-	}
+	
 }

@@ -10,6 +10,5 @@ if (!$login) {
 
 $smarty->assign("login", $login);
 $smarty->assign("title", "La boutique Chez Pupuce", true);
-$smarty->assign("Products", $products);
 
 $smarty->display('template/monCompte.tpl');

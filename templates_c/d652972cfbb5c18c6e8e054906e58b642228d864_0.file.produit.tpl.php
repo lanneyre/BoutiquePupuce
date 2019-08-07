@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-30 08:14:22
+/* Smarty version 3.1.33-dev-5, created on 2019-08-07 09:18:38
   from 'C:\laragon\www\CCI\Boutique\template\produit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d3ffc5eebb089_71396033',
+  'unifunc' => 'content_5d4a976e04dc97_50271003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd652972cfbb5c18c6e8e054906e58b642228d864' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\produit.tpl',
-      1 => 1564474460,
+      1 => 1565169516,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3ffc5eebb089_71396033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a976e04dc97_50271003 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9382318505d3ffc5ee9e317_86015387', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15069911855d4a976decbd62_16775939', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_9382318505d3ffc5ee9e317_86015387 extends Smarty_Internal_Block
+class Block_15069911855d4a976decbd62_16775939 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_9382318505d3ffc5ee9e317_86015387',
+    0 => 'Block_15069911855d4a976decbd62_16775939',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -45,20 +45,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="template/img/produits/<?php echo $_smarty_tpl->tpl_vars['product']->value->_img;?>
-" class="card-img" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->_nom;?>
+          <img src="template/img/produits/<?php echo $_smarty_tpl->tpl_vars['product']->value->img;?>
+" class="card-img" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->nom;?>
 ">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->_nom;?>
+            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->nom;?>
 </h5>
-            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->_description;?>
+            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->description;?>
 </p>
-            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->_prix;?>
+            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->prix;?>
  €</p>
             <form action="addProduits.php" method="post">
-              <input type="hidden" name="idProduit" value="<?php echo $_smarty_tpl->tpl_vars['product']->value->_id;?>
+              <input type="hidden" name="idProduit" value="<?php echo $_smarty_tpl->tpl_vars['product']->value->id;?>
 ">
               <input type="number" name="qteProduit" class="form-control" min="1" max="42" value="1">
               <input type="submit" class="btn btn-outline-primary" value="Ajouter au panier">
