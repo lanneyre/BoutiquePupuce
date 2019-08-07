@@ -2,13 +2,14 @@
 
 require "include/appTop.inc.php";
 
-$user = user::getById($_SESSION['id']);
+$user = manager::getById($_SESSION['id'], "user");
 $panier = $_SESSION['panier'];
-//var_dump($panier);
+//var_dump(manager::getById($_SESSION['id'], "user"));
 
 if(manager::createCommande($panier, $user)){
+
 	unset($_SESSION['panier']);
-	header("Location: index.php");
+	header("Location: panier.php");
 } else {
 	header("Location: panier.php?error");
 }

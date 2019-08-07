@@ -4,20 +4,20 @@
  */
 class user
 {
-	private $_id;
-	private $_login;
-	private $_name;
-	private $_mdp;
+	private $id;
+	private $login;
+	private $name;
+	private $mdp;
 
 	
 
-	function __construct($login, $mdp, $name = "", $id = null)
+	function __construct($login = "", $mdp = "", $name = "", $id = null)
 	{
 		# code...
-		$this->_id = $id;
-		$this->_name = $name;
-		$this->_login = $login;
-		$this->_mdp = $mdp;
+		$this->id = $id;
+		$this->name = $name;
+		$this->login = $login;
+		$this->mdp = $mdp;
 	}
 
 	function __get($name){
@@ -29,11 +29,11 @@ class user
 	}
 
 	function verifAutorisation(){
-		foreach (database::getUsers() as $user) {
+		foreach (database::selectAll("user") as $user) {
 			# code...
-			if($user['user_login'] == $this->_login && $user['user_mdp'] == $this->_mdp){
-				$this->_name = $user['user_name'];
-				$this->_id = $user['user_id'];
+			if($user['user_login'] == $this->login && $user['user_mdp'] == $this->mdp){
+				$this->name = $user['user_name'];
+				$this->id = $user['user_id'];
 				return true;
 			}
 		}
