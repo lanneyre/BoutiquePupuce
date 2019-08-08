@@ -31,23 +31,23 @@ class user
 	function verifAutorisation(){
 		foreach (database::selectAll("user") as $user) {
 			# code...
-			if($user['user_login'] == $this->login && $user['user_mdp'] == $this->mdp){
-				$this->name = $user['user_name'];
-				$this->id = $user['user_id'];
+			if($user['login'] == $this->login && $user['mdp'] == $this->mdp){
+				$this->name = $user['name'];
+				$this->id = $user['id'];
 				return true;
 			}
 		}
 		return false;
 	}
 
-	static function getById($id){
-		foreach (database::getUsers() as $user) {
-			# code...
-			if($user['user_id'] == $id){
-				return new user($user['user_login'], $user['user_mdp'],$user['user_name'], $user['user_id']);
-				break;
-			}
-		}
-		return null;
-	}
+	// static function getById($id){
+	// 	foreach (database::getUsers() as $user) {
+	// 		# code...
+	// 		if($user['user_id'] == $id){
+	// 			return new user($user['user_login'], $user['user_mdp'],$user['user_name'], $user['user_id']);
+	// 			break;
+	// 		}
+	// 	}
+	// 	return null;
+	// }
 }

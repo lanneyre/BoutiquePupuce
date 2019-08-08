@@ -7,10 +7,10 @@ require "include/appTop.inc.php";
 $utilisateur = new user($_POST['email'], $_POST['pass']);
 
 if($utilisateur->verifAutorisation()){
-	$_SESSION["login"] = $utilisateur->_login;
-	$_SESSION["id"] = $utilisateur->_id;
-	$_SESSION["mdp"] = $utilisateur->_mdp;
-	$_SESSION["name"] = $utilisateur->_name;
+	$_SESSION["login"] = $utilisateur->login;
+	$_SESSION["id"] = $utilisateur->id;
+	$_SESSION["mdp"] = $utilisateur->mdp;
+	$_SESSION["name"] = $utilisateur->name;
 }
 $page = $_SERVER['HTTP_REFERER'];
 

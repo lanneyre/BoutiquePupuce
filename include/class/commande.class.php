@@ -37,7 +37,7 @@ class commande
 
 	function getTotaux(){
 		$pu = $this->getPrixHT();
-		$arrayToReturn = array("pu" => number_format($pu,2), "tva" => number_format($pu*$this->getTVA(),2), "ttc" => number_format($pu*(1+$this->getTVA()),2));
+		$arrayToReturn = array("pu" => $pu, "tva" => $pu*$this->getTVA(), "ttc" => $pu*(1+$this->getTVA()));
 		return $arrayToReturn;
 	}
 
