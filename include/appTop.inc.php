@@ -8,6 +8,8 @@ Smarty_Autoloader::register();
 require_once 'include/Autoloader.php';
 Autoloader::register();
 
+require_once 'vendor/autoload.php';
+
 session_start();
 
 if(!isset($_SESSION['panier'])){

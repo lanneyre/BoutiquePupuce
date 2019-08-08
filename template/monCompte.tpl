@@ -6,11 +6,11 @@
       <form action="" method="post">
         <div class="row">
           <div class="col-6"><label for="name">Nom *</label></div>
-          <div class="col-6"><input type="text" id="name" name="name" class="form-control" value="{$userLogin->_name}"></div>
+          <div class="col-6"><input type="text" id="name" name="name" class="form-control" value="{$userLogin->name}"></div>
         </div>
         <div class="row">
           <div class="col-6"><label for="email">Email *</label></div>
-          <div class="col-6"><input type="email"id="email" name="email" class="form-control" value="{$userLogin->_login}"></div>
+          <div class="col-6"><input type="email"id="email" name="email" class="form-control" value="{$userLogin->login}"></div>
         </div>
         <div class="row">
           <div class="col-6"><label for="pass">Pass *</label></div>
@@ -28,6 +28,12 @@
     </div>
     <div class="col-6">
       <h5>Historique des commandes</h5>
+      {foreach $commandes as $commande}
+        <div class="row">
+          <div class="col-9">{{$commande['id']}} - {{$commande['date']}}</div>
+          <div class="col-3 text-center"><a href="generatePdf.php?idCommande={{$commande['id']}}"><img src="template/img/pdf.jpg" class="w-25" alt="Votre facture"></a></div>
+        </div>
+      {/foreach}
     </div>
   </section>
 {/block}

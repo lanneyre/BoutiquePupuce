@@ -19,7 +19,7 @@ class database
 		$sql = "SELECT * FROM `$table`";
 		$req = self::$_conn->query($sql);
 		if($comportement == PDO::FETCH_CLASS){
-			$req->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, $table);
+			$req->setFetchMode(PDO::FETCH_CLASS, $table);
 			return $req->fetchAll();
 		}
 		return $req->fetchAll($comportement);

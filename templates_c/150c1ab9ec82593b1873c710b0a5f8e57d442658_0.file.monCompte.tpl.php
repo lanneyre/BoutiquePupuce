@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-25 09:13:17
+/* Smarty version 3.1.33-dev-5, created on 2019-08-08 08:59:42
   from 'C:\laragon\www\CCI\Boutique\template\monCompte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d3972adc0b370_96600296',
+  'unifunc' => 'content_5d4be47e27e145_54855581',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '150c1ab9ec82593b1873c710b0a5f8e57d442658' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\monCompte.tpl',
-      1 => 1564045996,
+      1 => 1565254780,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3972adc0b370_96600296 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4be47e27e145_54855581 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16806496055d3972adc06198_22788030', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6678329565d4be47e2715b7_40317316', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_16806496055d3972adc06198_22788030 extends Smarty_Internal_Block
+class Block_6678329565d4be47e2715b7_40317316 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_16806496055d3972adc06198_22788030',
+    0 => 'Block_6678329565d4be47e2715b7_40317316',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -47,12 +47,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
       <form action="" method="post">
         <div class="row">
           <div class="col-6"><label for="name">Nom *</label></div>
-          <div class="col-6"><input type="text" id="name" name="name" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['userLogin']->value->_name;?>
+          <div class="col-6"><input type="text" id="name" name="name" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['userLogin']->value->name;?>
 "></div>
         </div>
         <div class="row">
           <div class="col-6"><label for="email">Email *</label></div>
-          <div class="col-6"><input type="email"id="email" name="email" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['userLogin']->value->_login;?>
+          <div class="col-6"><input type="email"id="email" name="email" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['userLogin']->value->login;?>
 "></div>
         </div>
         <div class="row">
@@ -71,6 +71,31 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     </div>
     <div class="col-6">
       <h5>Historique des commandes</h5>
+      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['commandes']->value, 'commande');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['commande']->value) {
+?>
+        <div class="row">
+          <div class="col-9"><?php ob_start();
+echo $_smarty_tpl->tpl_vars['commande']->value['id'];
+$_prefixVariable1 = ob_get_clean();
+echo $_prefixVariable1;?>
+ - <?php ob_start();
+echo $_smarty_tpl->tpl_vars['commande']->value['date'];
+$_prefixVariable2 = ob_get_clean();
+echo $_prefixVariable2;?>
+</div>
+          <div class="col-3 text-center"><a href="generatePdf.php?idCommande=<?php ob_start();
+echo $_smarty_tpl->tpl_vars['commande']->value['id'];
+$_prefixVariable3 = ob_get_clean();
+echo $_prefixVariable3;?>
+"><img src="template/img/pdf.jpg" class="w-25" alt="Votre facture"></a></div>
+        </div>
+      <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
   </section>
 <?php

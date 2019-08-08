@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Facture</title>
+    </head>
+    <body>
+    	<main>
+    		<div id="blockEntreprise">
+    			<div id="logo" style="width: 40%; float: right; text-align: right;"><img src="template/img/Logo.png" alt="Chez Pupuce" style="width: 50%;"></div>
+    			<div id="coordonnees" style="width: 48%;">
+    				<h4>Chez Pupuce</h4>
+    				Adresse : Lorem ipsum dolor 06200 Nice<br>
+    				Téléphone : ou pas<br>
+					Mail : SiJeVeux
+    			</div>
+    			<div id="client" style="margin-top: 30px; padding-left: 60%;">
+    				Id : {{$commande->userId}}<br>
+    				Nom : {{$commande->userName}}<br>
+    				Login : {{$commande->userLogin}}<br>
+    			</div>
+
+    			<div id="date"  style="margin-top: 30px;">{{$commande->date}}</div>
+
+    			<table style="width: 100%; margin-top: 30px;">
+    				<thead>
+    					<tr>
+    						<th colspan="2" style="width: 64%; text-align: left">Produit</th>
+    						<th style="width: 12%;">PU</th>
+    						<th style="width: 12%;">Qte</th>
+    						<th style="width: 12%;">Total HT</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					{foreach $commande->produits as $produit}
+    						<tr>
+    							<td style="width: 15%;"><img src="template/img/produits/{{$produit['img']}}" alt="{{$produit['nom']}}" width="15%"></td>
+    							<td style="text-align: left;">{{$produit['id']}} - {{$produit['nom']}}</td>
+    							<td>{{$produit['prix']}}</td>
+    							<td>{{$produit['qte']}}</td>
+    							<td>{{$produit['prix']*$produit['qte']}}</td>
+    						</tr>
+    					{/foreach}
+    				</tbody>
+    			</table>
+    		</div>
+    	</main>
+    </body>
+</html>

@@ -10,5 +10,5 @@ if (!$login) {
 
 $smarty->assign("login", $login);
 $smarty->assign("title", "La boutique Chez Pupuce", true);
-
+$smarty->assign("commandes", manager::getAllCommandeUtilisateur($_SESSION['id']));
 $smarty->display('template/monCompte.tpl');
