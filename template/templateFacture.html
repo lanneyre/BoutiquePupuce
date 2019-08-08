@@ -28,7 +28,7 @@
     						<th colspan="2" style="width: 64%; text-align: left">Produit</th>
     						<th style="width: 12%;">PU</th>
     						<th style="width: 12%;">Qte</th>
-    						<th style="width: 12%;">Total HT</th>
+    						<th style="width: 12%; text-align: right">Total HT</th>
     					</tr>
     				</thead>
     				<tbody>
@@ -36,12 +36,26 @@
     						<tr>
     							<td style="width: 15%;"><img src="template/img/produits/{{$produit['img']}}" alt="{{$produit['nom']}}" width="15%"></td>
     							<td style="text-align: left;">{{$produit['id']}} - {{$produit['nom']}}</td>
-    							<td>{{$produit['prix']}}</td>
-    							<td>{{$produit['qte']}}</td>
-    							<td>{{$produit['prix']*$produit['qte']}}</td>
+    							<td style="text-align: center;">{{number_format($produit['prix'],2)}}</td>
+    							<td style="text-align: center;">{{$produit['qte']}}</td>
+    							<td style="text-align: right;">{{number_format($produit['prix']*$produit['qte'], 2)}}</td>
     						</tr>
     					{/foreach}
     				</tbody>
+    				<tfoot>
+    					<tr>
+    						<td colspan="4" style="font-weight: bold; padding-right: 20px;text-align: right;">Prix HT</td>
+    						<td style="text-align: right;">{{$totaux['pu']}} €</td>
+    					</tr>
+    					<tr>
+    						<td colspan="4" style="font-weight: bold; padding-right: 20px;text-align: right;">TVA</td>
+    						<td style="text-align: right;">{{$totaux['tva']}} €</td>
+    					</tr>
+    					<tr>
+    						<td colspan="4" style="font-weight: bold; padding-right: 20px;text-align: right;">Prix TTC</td>
+    						<td style="text-align: right;">{{$totaux['ttc']}} €</td>
+    					</tr>
+    				</tfoot>
     			</table>
     		</div>
     	</main>

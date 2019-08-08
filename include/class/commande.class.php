@@ -22,7 +22,24 @@ class commande
 	// 	$this->produits = manager::recupProduits($this->id);
 	// }
 
-	
+	function getPrixHT(){
+		$pu = 0;
+		foreach ($this->produits as $produit) {
+			# code...
+			$pu+= $produit['prix']*$produit['qte'];
+		}
+		return $pu;
+	}
+
+	function getTVA(){
+		return 0.2;
+	}
+
+	function getTotaux(){
+		$pu = $this->getPrixHT();
+		$arrayToReturn = array("pu" => number_format($pu,2), "tva" => number_format($pu*$this->getTVA(),2), "ttc" => number_format($pu*(1+$this->getTVA()),2));
+		return $arrayToReturn;
+	}
 
 	function __get($name){
 		return $this->$name;

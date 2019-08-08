@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-08-08 09:55:30
+/* Smarty version 3.1.33-dev-5, created on 2019-08-08 10:37:31
   from 'C:\laragon\www\CCI\Boutique\template\templateFacture.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d4bf19239cdc6_55888951',
+  'unifunc' => 'content_5d4bfb6b531d33_67205887',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f0678115cd11bcc06c3b44b6c55bfb23dd9b49e4' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\templateFacture.html',
-      1 => 1565258128,
+      1 => 1565260650,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4bf19239cdc6_55888951 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bfb6b531d33_67205887 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html>
     <head>
@@ -67,7 +67,7 @@ echo $_prefixVariable4;?>
     						<th colspan="2" style="width: 64%; text-align: left">Produit</th>
     						<th style="width: 12%;">PU</th>
     						<th style="width: 12%;">Qte</th>
-    						<th style="width: 12%;">Total HT</th>
+    						<th style="width: 12%; text-align: right">Total HT</th>
     					</tr>
     				</thead>
     				<tbody>
@@ -95,18 +95,18 @@ echo $_smarty_tpl->tpl_vars['produit']->value['nom'];
 $_prefixVariable8 = ob_get_clean();
 echo $_prefixVariable8;?>
 </td>
-    							<td><?php ob_start();
-echo $_smarty_tpl->tpl_vars['produit']->value['prix'];
+    							<td style="text-align: center;"><?php ob_start();
+echo number_format($_smarty_tpl->tpl_vars['produit']->value['prix'],2);
 $_prefixVariable9 = ob_get_clean();
 echo $_prefixVariable9;?>
 </td>
-    							<td><?php ob_start();
+    							<td style="text-align: center;"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['produit']->value['qte'];
 $_prefixVariable10 = ob_get_clean();
 echo $_prefixVariable10;?>
 </td>
-    							<td><?php ob_start();
-echo $_smarty_tpl->tpl_vars['produit']->value['prix']*$_smarty_tpl->tpl_vars['produit']->value['qte'];
+    							<td style="text-align: right;"><?php ob_start();
+echo number_format($_smarty_tpl->tpl_vars['produit']->value['prix']*$_smarty_tpl->tpl_vars['produit']->value['qte'],2);
 $_prefixVariable11 = ob_get_clean();
 echo $_prefixVariable11;?>
 </td>
@@ -116,6 +116,32 @@ echo $_prefixVariable11;?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     				</tbody>
+    				<tfoot>
+    					<tr>
+    						<td colspan="4" style="font-weight: bold; padding-right: 20px;text-align: right;">Prix HT</td>
+    						<td style="text-align: right;"><?php ob_start();
+echo $_smarty_tpl->tpl_vars['totaux']->value['pu'];
+$_prefixVariable12 = ob_get_clean();
+echo $_prefixVariable12;?>
+ €</td>
+    					</tr>
+    					<tr>
+    						<td colspan="4" style="font-weight: bold; padding-right: 20px;text-align: right;">TVA</td>
+    						<td style="text-align: right;"><?php ob_start();
+echo $_smarty_tpl->tpl_vars['totaux']->value['tva'];
+$_prefixVariable13 = ob_get_clean();
+echo $_prefixVariable13;?>
+ €</td>
+    					</tr>
+    					<tr>
+    						<td colspan="4" style="font-weight: bold; padding-right: 20px;text-align: right;">Prix TTC</td>
+    						<td style="text-align: right;"><?php ob_start();
+echo $_smarty_tpl->tpl_vars['totaux']->value['ttc'];
+$_prefixVariable14 = ob_get_clean();
+echo $_prefixVariable14;?>
+ €</td>
+    					</tr>
+    				</tfoot>
     			</table>
     		</div>
     	</main>

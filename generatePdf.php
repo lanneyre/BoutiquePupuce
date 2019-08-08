@@ -23,6 +23,8 @@ if (empty($commande)) {
 
 $smarty->assign("commande", $commande);
 
+$smarty->assign("totaux", $commande->getTotaux());
+
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML($smarty->fetch('template/templateFacture.html'));
 $mpdf->Output();
