@@ -56,7 +56,7 @@ class manager
 	}
 
 	static function getById($id, $table = "produit"){
-		foreach (database::selectAll($table, PDO::FETCH_CLASS) as $element) {
+		foreach (database::selectAll($table, PDO::FETCH_OBJ) as $element) {
 			# code...
 			// echo "<pre>";
 			// var_dump($element);
