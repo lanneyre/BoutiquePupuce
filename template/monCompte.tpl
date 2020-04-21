@@ -31,7 +31,7 @@
       {foreach $commandes as $commande}
         <div class="row">
           <div class="col-9">{{$commande['id']}} - {{$commande['date']}}</div>
-          <div class="col-3 text-center"><a href="generatePdf.php?idCommande={{$commande['id']}}"><img src="template/img/pdf.jpg" class="w-25" alt="Votre facture"></a></div>
+          <div class="col-3 text-center"><a href="generatePdf.php?idCommande={{$commande['id']}}" target="_blank"><img src="template/img/pdf.jpg" class="w-25" alt="Votre facture"></a></div>
         </div>
       {/foreach}
     </div>

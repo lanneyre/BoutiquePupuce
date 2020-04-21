@@ -12,9 +12,16 @@ if (empty($_GET['idCommande'])) {
 extract($_GET);
 
 $commande = manager::getById($idCommande, "commande");
+//var_dump($commande);
 if (empty($commande)) {
 	# code...
 	header("Location: monCompte.php?commandeIntrouvable");
+	exit;
+}
+
+if ($commande->userId != $_SESSION['id']) {
+	# code...
+	header("Location: monCompte.php?pasLeBonUser");
 	exit;
 }
 // $commande->recupProduits();

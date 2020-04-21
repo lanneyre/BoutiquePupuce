@@ -82,6 +82,8 @@ class manager
 	static function recupProduits($idCommande){
 		$arrayToReturn = array();
 		foreach(database::selectAll("produitcommande") as $produitcommande){
+			// var_dump($produitcommande);
+			// var_dump($idCommande);
 			if($produitcommande['commandeID'] == $idCommande){
 				$arrayToReturn[] = $produitcommande;
 			}
