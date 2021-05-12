@@ -1,4 +1,5 @@
 {extends file="template/layout.tpl"}
+
 {block name=body}
     <section class="row justify-content-around">
         {foreach $categories as $categorie}
@@ -39,3 +40,5 @@
         </div>
     </section>
 {/block}
+
+{block name=titre}{$titre}{/block}

@@ -55,8 +55,8 @@ class manager
 		return database::createCommande($user, $panier);
 	}
 
-	static function getById($id, $table = "produit"){
-		foreach (database::selectAll($table, PDO::FETCH_OBJ) as $element) {
+	static function getById($id, $table = "produit", $comportement = PDO::FETCH_OBJ){
+		foreach (database::selectAll($table, $comportement) as $element) {
 			# code...
 			// echo "<pre>";
 			// var_dump($element);

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-08-07 09:18:38
+/* Smarty version 3.1.33-dev-5, created on 2021-05-12 08:40:48
   from 'C:\laragon\www\CCI\Boutique\template\produit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d4a976e04dc97_50271003',
+  'unifunc' => 'content_609b94903bc994_07856145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4a976e04dc97_50271003 (Smarty_Internal_Template $_smarty_tpl) {
+function content_609b94903bc994_07856145 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15069911855d4a976decbd62_16775939', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1997558958609b94903aff71_00222204', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_15069911855d4a976decbd62_16775939 extends Smarty_Internal_Block
+class Block_1997558958609b94903aff71_00222204 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_15069911855d4a976decbd62_16775939',
+    0 => 'Block_1997558958609b94903aff71_00222204',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

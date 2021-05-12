@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-30 09:01:15
+/* Smarty version 3.1.33-dev-5, created on 2021-05-12 08:17:26
   from 'C:\laragon\www\CCI\Boutique\template\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d40075b940661_50706389',
+  'unifunc' => 'content_609b8f16a79a28_37054789',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:template/login.tpl' => 1,
   ),
 ),false)) {
-function content_5d40075b940661_50706389 (Smarty_Internal_Template $_smarty_tpl) {
+function content_609b8f16a79a28_37054789 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 	  <a class="navbar-brand" href="#"><img src="template/img/Logo.png" alt="Chez Pupuce" id="logo"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

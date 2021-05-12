@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mer. 07 août 2019 à 10:25
+-- Généré le : lun. 10 mai 2021 à 11:41
 -- Version du serveur :  5.7.24
--- Version de PHP :  7.2.11
+-- Version de PHP : 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `boutiquepoo`
+-- Base de données : `boutiquepoo`
 --
+CREATE DATABASE IF NOT EXISTS `boutiquepoo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `boutiquepoo`;
 
 -- --------------------------------------------------------
 
@@ -28,7 +30,6 @@ SET time_zone = "+00:00";
 -- Structure de la table `categorie`
 --
 
-DROP TABLE IF EXISTS `categorie`;
 CREATE TABLE IF NOT EXISTS `categorie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -55,7 +56,6 @@ INSERT INTO `categorie` (`id`, `nom`, `description`, `img`, `parentId`) VALUES
 -- Structure de la table `commande`
 --
 
-DROP TABLE IF EXISTS `commande`;
 CREATE TABLE IF NOT EXISTS `commande` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -63,14 +63,15 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `userLogin` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
 INSERT INTO `commande` (`id`, `date`, `userId`, `userName`, `userLogin`) VALUES
-(1, '2019-08-07 12:23:44', 2, 'Toi', 'toi@toi.toi');
+(1, '2019-08-07 12:23:44', 2, 'Toi', 'toi@toi.toi'),
+(2, '2021-02-04 14:04:51', 1, 'Moi', 'moi@moi.moi');
 
 -- --------------------------------------------------------
 
@@ -78,7 +79,6 @@ INSERT INTO `commande` (`id`, `date`, `userId`, `userName`, `userLogin`) VALUES
 -- Structure de la table `produit`
 --
 
-DROP TABLE IF EXISTS `produit`;
 CREATE TABLE IF NOT EXISTS `produit` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -118,7 +118,6 @@ INSERT INTO `produit` (`id`, `nom`, `description`, `img`, `prix`, `stock`, `cate
 -- Structure de la table `produitcommande`
 --
 
-DROP TABLE IF EXISTS `produitcommande`;
 CREATE TABLE IF NOT EXISTS `produitcommande` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -138,8 +137,10 @@ CREATE TABLE IF NOT EXISTS `produitcommande` (
 --
 
 INSERT INTO `produitcommande` (`id`, `nom`, `description`, `img`, `prix`, `categorieId`, `commandeID`, `qte`) VALUES
-(13, 'Du pouvoir', 'desc', 'pouvoir.gif', 42541900, 1, 1, 1),
-(15, 'Courage', 'desc', 'mecreant.gif', 2, 1, 1, 1);
+(5, 'chouette', 'desc', 'chouette.jpg', 56, 2, 2, 1),
+(13, 'Du pouvoir', 'desc', 'pouvoir.gif', 425, 1, 1, 1),
+(15, 'Courage', 'desc', 'mecreant.gif', 2, 1, 1, 1),
+(15, 'Courage', 'desc', 'mecreant.gif', 2, 1, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -147,7 +148,6 @@ INSERT INTO `produitcommande` (`id`, `nom`, `description`, `img`, `prix`, `categ
 -- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,

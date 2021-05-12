@@ -3,7 +3,7 @@ require "include/appTop.inc.php";
 
 
 $smarty->assign("login", $login);
-$smarty->assign("title", "La boutique Chez Pupuce", true);
+$smarty->assign("titre", "La boutique Chez Pupuce", true);
 
 $smarty->assign("products", manager::getAllproduits());
 $topVentes = manager::getTopVentes();

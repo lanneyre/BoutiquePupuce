@@ -11,8 +11,8 @@ if (empty($_GET['idCommande'])) {
 //$idCommande = $_GET['idCommande'];
 extract($_GET);
 
-$commande = manager::getById($idCommande, "commande");
-//var_dump($commande);
+$commande = manager::getById($idCommande, "commande", PDO::FETCH_CLASS);
+// var_dump($commande->getTotaux());
 if (empty($commande)) {
 	# code...
 	header("Location: monCompte.php?commandeIntrouvable");

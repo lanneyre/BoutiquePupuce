@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-08-08 08:59:42
+/* Smarty version 3.1.33-dev-5, created on 2021-05-12 08:42:57
   from 'C:\laragon\www\CCI\Boutique\template\monCompte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d4be47e27e145_54855581',
+  'unifunc' => 'content_609b95110f12d9_99683291',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '150c1ab9ec82593b1873c710b0a5f8e57d442658' => 
     array (
       0 => 'C:\\laragon\\www\\CCI\\Boutique\\template\\monCompte.tpl',
-      1 => 1565254780,
+      1 => 1587479388,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4be47e27e145_54855581 (Smarty_Internal_Template $_smarty_tpl) {
+function content_609b95110f12d9_99683291 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6678329565d4be47e2715b7_40317316', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_267658794609b95110dec47_58017993', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block 'body'} */
-class Block_6678329565d4be47e2715b7_40317316 extends Smarty_Internal_Block
+class Block_267658794609b95110dec47_58017993 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_6678329565d4be47e2715b7_40317316',
+    0 => 'Block_267658794609b95110dec47_58017993',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -90,7 +90,7 @@ echo $_prefixVariable2;?>
 echo $_smarty_tpl->tpl_vars['commande']->value['id'];
 $_prefixVariable3 = ob_get_clean();
 echo $_prefixVariable3;?>
-"><img src="template/img/pdf.jpg" class="w-25" alt="Votre facture"></a></div>
+" target="_blank"><img src="template/img/pdf.jpg" class="w-25" alt="Votre facture"></a></div>
         </div>
       <?php
 }

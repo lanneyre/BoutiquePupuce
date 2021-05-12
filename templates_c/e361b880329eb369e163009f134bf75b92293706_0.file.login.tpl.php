@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33-dev-5, created on 2019-07-30 09:41:57
+/* Smarty version 3.1.33-dev-5, created on 2021-05-12 08:17:26
   from 'C:\laragon\www\CCI\Boutique\template\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33-dev-5',
-  'unifunc' => 'content_5d4010e503a844_43562293',
+  'unifunc' => 'content_609b8f16b9df93_59114586',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4010e503a844_43562293 (Smarty_Internal_Template $_smarty_tpl) {
+function content_609b8f16b9df93_59114586 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Modal -->
 <div class="modal" id="formLogin" tabindex="-1" role="dialog" aria-labelledby="LoginTitre" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
